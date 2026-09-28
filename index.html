@@ -6,19 +6,8 @@
 <title>RoadFolio — Privacy Policy</title>
 <style>
 :root { color-scheme: light dark; }
-body {
-max-width: 680px;
-margin: 0 auto;
-padding: 48px 24px 96px;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-line-height: 1.6;
-color: #1c1c1e;
-background: #fbfaf8;
-}
-@media (prefers-color-scheme: dark) {
-body { color: #f2f1ee; background: #1c1c1e; }
-a { color: #8ab4ff; }
-}
+body { max-width: 680px; margin: 0 auto; padding: 48px 24px 96px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #1c1c1e; background: #fbfaf8; }
+@media (prefers-color-scheme: dark) { body { color: #f2f1ee; background: #1c1c1e; } a { color: #8ab4ff; } }
 h1 { font-size: 1.6rem; margin-bottom: 0.2em; }
 h2 { font-size: 1.15rem; margin-top: 2em; }
 .updated { opacity: 0.65; font-size: 0.9rem; margin-bottom: 2.5em; }
@@ -28,94 +17,42 @@ a { color: #0a6cff; }
 </style>
 </head>
 <body>
-
 <h1>Privacy Policy for RoadFolio</h1>
-<p class="updated">Last updated: August 23, 2026</p>
+<p class="updated">Last updated: September 28, 2026</p>
 
-<p>RoadFolio (also listed as "RoadFolio — Vehicle Passport") is a personal
-vehicle service-book app made by PPProdukcija. This page explains, plainly
-and completely, what data the app handles and why. RoadFolio has no
-account system and no servers of its own — almost everything it does
-happens entirely on your iPhone.</p>
+<p>RoadFolio is a vehicle service-book app made by PPProdukcija. Its core logbook works without an account or AI. This policy covers the current app and the optional AI Mechanic introduced in version 1.1.</p>
 
-<h2>Data you create</h2>
-<p>The vehicles, service records, mileage history, photos, and documents
-you add in RoadFolio are stored locally on your device only. This build of
-RoadFolio does not sync to iCloud or anywhere else — your logbook stays on
-this iPhone and in your own device backups. Use the app's "Export
-everything" option if you want a copy of your own data.</p>
+<h2>Your vehicle logbook</h2>
+<p>Vehicles, service records, faults, mileage history, photos, documents and saved AI conversations are stored on your iPhone. They may be included in your own device backups. RoadFolio does not provide cloud sync. You can export or share your data using the app's tools.</p>
 
-<h2>Camera and photos</h2>
-<p>With your permission, RoadFolio uses the camera to scan a VIN, read
-your dashboard's mileage, and capture service invoices, and can attach
-photos or documents from your photo library to a vehicle record. All of
-this scanning and text recognition happens on your device using Apple's
-built-in Vision framework — no photo, document, or camera frame is ever
-uploaded anywhere.</p>
+<h2>Camera, photos and dictation</h2>
+<p>RoadFolio uses the camera or photo library only when you choose to scan, capture or attach something. VIN, odometer, invoice and document recognition use Apple's on-device Vision framework. These scans are not uploaded by the scanner. A photo you select for AI Mechanic is different and may be transmitted as described below. Dictation uses on-device speech recognition and is unavailable if your iPhone cannot recognize speech offline.</p>
 
-<h2>Microphone and speech recognition</h2>
-<p>If you choose to dictate a record instead of typing it, RoadFolio uses
-on-device speech recognition only (`requiresOnDeviceRecognition` is
-enforced in code) — your voice is never sent off the device, and if this
-iPhone can't recognize speech offline, dictation simply doesn't happen.</p>
+<h2>Optional VIN online lookup</h2>
+<p>VIN online lookup is off by default. If you enable it, the VIN you scan or enter is sent to the U.S. National Highway Traffic Safety Administration's vPIC service to retrieve vehicle details. RoadFolio does not attach an account or advertising identifier to this request.</p>
 
-<h2>VIN online lookup (optional, off by default)</h2>
-<p>A VIN decoded on your device can only reveal the manufacturer and model
-year — that's genuinely all a VIN encodes offline. If you turn on "VIN
-online lookup" in Settings, RoadFolio will additionally send the scanned
-VIN to NHTSA's free, public vPIC vehicle database (a U.S. government
-service, vpic.nhtsa.dot.gov) to try to add the model name and a few other
-details. This is the only network request RoadFolio ever makes, anywhere
-in the app:</p>
-<ul>
-<li>It is off by default — you have to turn it on yourself.</li>
-<li>Only the VIN itself is sent. Nothing else — no name, account,
-location, or device identifier — is attached to that request.</li>
-<li>It only happens when you scan or enter a VIN, and only while the
-setting is on.</li>
-<li>NHTSA is a public government lookup service, not an analytics,
-advertising, or tracking partner, and RoadFolio does not use the VIN
-or the response for anything besides showing you the extra vehicle
-detail.</li>
-</ul>
+<h2>Optional AI Mechanic</h2>
+<p>AI analysis is off until you enable it in the app. When you tap Ask AI, RoadFolio sends the vehicle year, make and model, the symptom and question, up to six recent messages in that fault, up to twelve relevant service records (including titles, work and notes), up to eight earlier faults, and a photo if you selected one for that request to a RoadFolio service hosted by Cloudflare. The service forwards this request to OpenAI to generate a response. Avoid including personal details in notes or photos if you do not want them processed. AI suggestions can be inaccurate and are not a confirmed diagnosis or a substitute for a qualified mechanic.</p>
+<p>With AI consent enabled, the app also sends a random installation identifier to check the remaining AI allowance and verify an AI purchase. The RoadFolio service does not retain the submitted fault text, photo or generated answer. OpenAI may retain API abuse-monitoring logs for up to 30 days under its applicable terms. OpenAI does not use API content to train its models by default. See <a href="https://developers.openai.com/api/docs/guides/your-data">OpenAI's API data controls</a> for details.</p>
+
+<h2>AI usage and purchases</h2>
+<p>To enforce the free weekly allowance and optional purchased credits, RoadFolio's service stores the random installation identifier, weekly usage count, credit balance, and Apple transaction identifiers for credit grants and refunds. Weekly usage records are deleted after approximately eight weeks. Credit and transaction records are retained to prevent duplicate grants and handle refunds while the service operates. Cloudflare processes request IP addresses to rate-limit and deliver the service; RoadFolio does not store these addresses in its usage database.</p>
+<p>Apple processes App Store payments. RoadFolio does not receive your payment card details. Existing optional Premium purchases are handled through StoreKit on the device. Optional AI checks are a separate consumable in-app purchase. Unused AI credits are tied to this installation and may not transfer if you remove the app or change devices.</p>
 
 <h2>Notifications</h2>
-<p>If you allow notifications, RoadFolio uses them to remind you about
-upcoming vehicle maintenance. Notifications are scheduled and delivered
-entirely on your device.</p>
+<p>If you allow notifications, maintenance reminders are scheduled and delivered locally on your device. You can turn them off in RoadFolio Settings or iOS Settings.</p>
 
-<h2>Purchases</h2>
-<p>RoadFolio offers optional monthly, yearly, and lifetime unlocks through
-Apple's App Store (StoreKit). Payment is handled entirely by Apple —
-RoadFolio never sees or stores your payment details, and has no server of
-its own to send purchase data to. RoadFolio only asks your iPhone, via
-Apple's StoreKit APIs, whether an entitlement is active, so it can unlock
-the corresponding features.</p>
-
-<h2>What we don't do</h2>
+<h2>What RoadFolio does not do</h2>
 <ul>
-<li>We don't run analytics, crash reporting, advertising, or tracking
-SDKs of any kind.</li>
-<li>We don't collect your name, email, or contacts — RoadFolio has no
-account system at all.</li>
-<li>We don't sell or share your data with third parties. The one
-exception — sending a scanned VIN to NHTSA's public database — is
-described above in full, is opt-in, and is off by default.</li>
-<li>We don't track you or your device across other companies' apps or
-websites.</li>
+<li>No analytics, advertising or tracking SDKs are used.</li>
+<li>No account is required, and RoadFolio does not collect your name, email or contacts for app use.</li>
+<li>RoadFolio does not sell your data or track you across other companies' apps or websites.</li>
 </ul>
 
-<h2>Children's privacy</h2>
-<p>RoadFolio is not directed at children and does not knowingly collect
-data from children.</p>
-
-<h2>Changes to this policy</h2>
-<p>If this policy changes, the update will be posted on this page with a
-new "last updated" date.</p>
+<h2>Children and changes</h2>
+<p>RoadFolio is not directed at children and does not knowingly collect children's data. Changes to this policy will be posted here with a new update date.</p>
 
 <h2>Contact</h2>
-<p>Questions about this policy can be sent to
-<a href="mailto:ppejic89@gmail.com">ppejic89@gmail.com</a>.</p>
-
+<p>Privacy questions can be sent to <a href="mailto:ppejic89@gmail.com">ppejic89@gmail.com</a>.</p>
 </body>
 </html>
